@@ -1,0 +1,208 @@
+Args: /home/abhishek/llvm-project/clang_build/bin/opt -debug -enable-new-pm=0 -openmp-opt-cgscc 
+WARNING: You're attempting to print out a bitcode file.
+This is inadvisable as it may cause display problems. If
+you REALLY want to taste LLVM bitcode first-hand, you
+can force output with the `-f' option.
+
+[openmp-opt]__kmpc_fork_call found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]Run on SCC with 1 functions in a slice with 3 functions
+[Attributor] Identified and initialized 0 abstract attributes.
+
+
+[Attributor] #Iteration: 1, Worklist size: 0
+[Attributor] #Iteration: 1, Worklist+Dependent size: 0
+
+[Attributor] Fixpoint iteration done after: 1/32 iterations
+
+[Attributor] Manifested 0 arguments while 0 were in a valid fixpoint state
+
+[Attributor] Delete/replace at least 0 functions and 0 blocks and 0 instructions and 0 values and 0 uses. To insert 0 unreachables.
+Preserve manifest added 0 blocks
+[Attributor] DeadInsts size: 0
+[Attributor] Check use: .omp_outlined. in   call void (ptr, i32, ptr, ...) @__kmpc_fork_call(ptr @1, i32 4, ptr @.omp_outlined., ptr %c, ptr %a, ptr %b, ptr %d)
+[Attributor] Call site callback failed for   call void (ptr, i32, ptr, ...) @__kmpc_fork_call(ptr @1, i32 4, ptr @.omp_outlined., ptr %c, ptr %a, ptr %b, ptr %d)
+[Attributor] Deleted 0 functions after manifest.
+[Attributor] Done with 1 functions, result: unchanged.
+[openmp-opt]Found 0 global thread ID arguments
+[openmp-opt]Conducting Parallel Code Motion
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 BEGIN - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]Instructions not for CM : 
+[openmp-opt]Instructions for CM : 
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 END - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]__kmpc_fork_call found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]Run on SCC with 1 functions in a slice with 5 functions
+[Attributor] Identified and initialized 0 abstract attributes.
+
+
+[Attributor] #Iteration: 1, Worklist size: 0
+[Attributor] #Iteration: 1, Worklist+Dependent size: 0
+
+[Attributor] Fixpoint iteration done after: 1/32 iterations
+
+[Attributor] Manifested 0 arguments while 0 were in a valid fixpoint state
+
+[Attributor] Delete/replace at least 0 functions and 0 blocks and 0 instructions and 0 values and 0 uses. To insert 0 unreachables.
+Preserve manifest added 0 blocks
+[Attributor] DeadInsts size: 0
+[Attributor] Deleted 0 functions after manifest.
+[Attributor] Done with 1 functions, result: unchanged.
+[openmp-opt]Found 0 global thread ID arguments
+[openmp-opt]Conducting Parallel Code Motion
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 BEGIN - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]
+ in selectCMInst closure 
+Calling Function : _Z3foov Called Function : .omp_outlined.
+[openmp-opt]Basic Block Size 1
+[openmp-opt]in BB Loop
+
+entry:
+  %.global_tid..addr = alloca ptr, align 8
+  %.bound_tid..addr = alloca ptr, align 8
+  %c.addr = alloca ptr, align 8
+  %a.addr = alloca ptr, align 8
+  %b.addr = alloca ptr, align 8
+  %d.addr = alloca ptr, align 8
+  store ptr %.global_tid., ptr %.global_tid..addr, align 8, !tbaa !6
+  store ptr %.bound_tid., ptr %.bound_tid..addr, align 8, !tbaa !6
+  store ptr %c, ptr %c.addr, align 8, !tbaa !6
+  store ptr %a, ptr %a.addr, align 8, !tbaa !6
+  store ptr %b, ptr %b.addr, align 8, !tbaa !6
+  store ptr %d, ptr %d.addr, align 8, !tbaa !6
+  %0 = load ptr, ptr %c.addr, align 8, !tbaa !6
+  %1 = load ptr, ptr %a.addr, align 8, !tbaa !6
+  %2 = load ptr, ptr %b.addr, align 8, !tbaa !6
+  %3 = load ptr, ptr %d.addr, align 8, !tbaa !6
+  %4 = load i32, ptr %1, align 4, !tbaa !10
+  %5 = load i32, ptr %2, align 4, !tbaa !10
+  %add = add nsw i32 %4, %5
+  store i32 %add, ptr %0, align 4, !tbaa !10
+  %6 = load i32, ptr %0, align 4, !tbaa !10
+  %add1 = add nsw i32 %6, 3
+  store i32 %add1, ptr %3, align 4, !tbaa !10
+  ret void
+
+[openmp-opt]in BB->I Loop
+  %.global_tid..addr = alloca ptr, align 8
+[openmp-opt]in BB->I Loop
+  %.bound_tid..addr = alloca ptr, align 8
+[openmp-opt]in BB->I Loop
+  %c.addr = alloca ptr, align 8
+[openmp-opt]in BB->I Loop
+  %a.addr = alloca ptr, align 8
+[openmp-opt]in BB->I Loop
+  %b.addr = alloca ptr, align 8
+[openmp-opt]in BB->I Loop
+  %d.addr = alloca ptr, align 8
+[openmp-opt]in BB->I Loop
+  store ptr %.global_tid., ptr %.global_tid..addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  store ptr %.bound_tid., ptr %.bound_tid..addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  store ptr %c, ptr %c.addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  store ptr %a, ptr %a.addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  store ptr %b, ptr %b.addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  store ptr %d, ptr %d.addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  %0 = load ptr, ptr %c.addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  %1 = load ptr, ptr %a.addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  %2 = load ptr, ptr %b.addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  %3 = load ptr, ptr %d.addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  %4 = load i32, ptr %1, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  %5 = load i32, ptr %2, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  %add = add nsw i32 %4, %5
+[openmp-opt]in BB->I Loop
+  store i32 %add, ptr %0, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  %6 = load i32, ptr %0, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  %add1 = add nsw i32 %6, 3
+[openmp-opt]in BB->I Loop
+  store i32 %add1, ptr %3, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  ret void
+[openmp-opt]Instructions not for CM : 
+  store ptr %d, ptr %d.addr, align 8, !tbaa !6
+  %d.addr = alloca ptr, align 8
+  store ptr %.bound_tid., ptr %.bound_tid..addr, align 8, !tbaa !6
+  store ptr %b, ptr %b.addr, align 8, !tbaa !6
+  store ptr %.global_tid., ptr %.global_tid..addr, align 8, !tbaa !6
+  store ptr %a, ptr %a.addr, align 8, !tbaa !6
+  store ptr %c, ptr %c.addr, align 8, !tbaa !6
+  ret void
+  %5 = load i32, ptr %2, align 4, !tbaa !10
+  %.global_tid..addr = alloca ptr, align 8
+  %4 = load i32, ptr %1, align 4, !tbaa !10
+  %.bound_tid..addr = alloca ptr, align 8
+  store i32 %add1, ptr %3, align 4, !tbaa !10
+  %c.addr = alloca ptr, align 8
+  %6 = load i32, ptr %0, align 4, !tbaa !10
+  %a.addr = alloca ptr, align 8
+  %b.addr = alloca ptr, align 8
+  store i32 %add, ptr %0, align 4, !tbaa !10
+[openmp-opt]Instructions for CM : 
+  %0 = load ptr, ptr %c.addr, align 8, !tbaa !6
+  %1 = load ptr, ptr %a.addr, align 8, !tbaa !6
+  %2 = load ptr, ptr %b.addr, align 8, !tbaa !6
+  %3 = load ptr, ptr %d.addr, align 8, !tbaa !6
+  %add = add nsw i32 %4, %5
+  %add1 = add nsw i32 %6, 3
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 END - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+CGSCCPASSMGR: Refreshing SCC with 1 nodes:
+Call graph node for function: '_Z3foov'<<0x564580296910>>  #uses=2
+  CS<0x5645802aff90> calls function '__kmpc_fork_call'
+  CS<None> calls function '.omp_outlined.'
+
+CGSCCPASSMGR: SCC Refresh didn't change call graph.
+[openmp-opt]__kmpc_fork_call found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]Run on SCC with 1 functions in a slice with 6 functions
+[Attributor] Identified and initialized 0 abstract attributes.
+
+
+[Attributor] #Iteration: 1, Worklist size: 0
+[Attributor] #Iteration: 1, Worklist+Dependent size: 0
+
+[Attributor] Fixpoint iteration done after: 1/32 iterations
+
+[Attributor] Manifested 0 arguments while 0 were in a valid fixpoint state
+
+[Attributor] Delete/replace at least 0 functions and 0 blocks and 0 instructions and 0 values and 0 uses. To insert 0 unreachables.
+Preserve manifest added 0 blocks
+[Attributor] DeadInsts size: 0
+[Attributor] Deleted 0 functions after manifest.
+[Attributor] Done with 1 functions, result: unchanged.
+[openmp-opt]Found 0 global thread ID arguments
+[openmp-opt]Conducting Parallel Code Motion
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 BEGIN - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]Instructions not for CM : 
+[openmp-opt]Instructions for CM : 
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 END - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+

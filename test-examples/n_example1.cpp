@@ -3,17 +3,16 @@
 
 int a ,b ,c;
 
-int foo() {
+void foo() {
     a = 1;
     b = 2;
     c = 3;
     int d = 0;
-    #pragma omp parallel
+    #pragma omp parallel default(shared)
     {
         c = a + b;
         d = c + 3;
     }
-    return 0;
 }
 
 int main(){

@@ -1,0 +1,156 @@
+Args: /home/abhishek/llvm-project/clang_build/bin/opt -debug -enable-new-pm=0 -openmp-opt-cgscc 
+WARNING: You're attempting to print out a bitcode file.
+This is inadvisable as it may cause display problems. If
+you REALLY want to taste LLVM bitcode first-hand, you
+can force output with the `-f' option.
+
+[openmp-opt]__kmpc_fork_call found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_init_4 found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_fini found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]Run on SCC with 1 functions in a slice with 4 functions
+[Attributor] Identified and initialized 0 abstract attributes.
+
+
+[Attributor] #Iteration: 1, Worklist size: 0
+[Attributor] #Iteration: 1, Worklist+Dependent size: 0
+
+[Attributor] Fixpoint iteration done after: 1/32 iterations
+
+[Attributor] Manifested 0 arguments while 0 were in a valid fixpoint state
+
+[Attributor] Delete/replace at least 0 functions and 0 blocks and 0 instructions and 0 values and 0 uses. To insert 0 unreachables.
+Preserve manifest added 0 blocks
+[Attributor] DeadInsts size: 0
+[Attributor] Deleted 0 functions after manifest.
+[Attributor] Done with 1 functions, result: unchanged.
+[openmp-opt]Found 0 global thread ID arguments
+[openmp-opt]Conducting Parallel Code Motion
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 BEGIN - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]Instructions not for CM : 
+[openmp-opt]Instructions for CM : 
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 END - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]__kmpc_fork_call found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_init_4 found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_fini found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]Run on SCC with 1 functions in a slice with 8 functions
+[Attributor] Identified and initialized 0 abstract attributes.
+
+
+[Attributor] #Iteration: 1, Worklist size: 0
+[Attributor] #Iteration: 1, Worklist+Dependent size: 0
+
+[Attributor] Fixpoint iteration done after: 1/32 iterations
+
+[Attributor] Manifested 0 arguments while 0 were in a valid fixpoint state
+
+[Attributor] Delete/replace at least 0 functions and 0 blocks and 0 instructions and 0 values and 0 uses. To insert 0 unreachables.
+Preserve manifest added 0 blocks
+[Attributor] DeadInsts size: 0
+[Attributor] Check use: .omp_outlined. in   call void (ptr, i32, ptr, ...) @__kmpc_fork_call(ptr @2, i32 0, ptr @.omp_outlined.)
+[Attributor] Call site callback failed for   call void (ptr, i32, ptr, ...) @__kmpc_fork_call(ptr @2, i32 0, ptr @.omp_outlined.)
+[Attributor] Deleted 0 functions after manifest.
+[Attributor] Done with 1 functions, result: unchanged.
+[openmp-opt]Found 0 global thread ID arguments
+[openmp-opt]Conducting Parallel Code Motion
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 BEGIN - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]Instructions not for CM : 
+[openmp-opt]Instructions for CM : 
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 END - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]__kmpc_fork_call found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_init_4 found
+[openmp-opt]-> got 0 uses in 0 different functions.
+[openmp-opt]__kmpc_for_static_fini found
+[openmp-opt]-> got 0 uses in 0 different functions.
+[openmp-opt]Run on SCC with 1 functions in a slice with 3 functions
+[Attributor] Identified and initialized 0 abstract attributes.
+
+
+[Attributor] #Iteration: 1, Worklist size: 0
+[Attributor] #Iteration: 1, Worklist+Dependent size: 0
+
+[Attributor] Fixpoint iteration done after: 1/32 iterations
+
+[Attributor] Manifested 0 arguments while 0 were in a valid fixpoint state
+
+[Attributor] Delete/replace at least 0 functions and 0 blocks and 0 instructions and 0 values and 0 uses. To insert 0 unreachables.
+Preserve manifest added 0 blocks
+[Attributor] DeadInsts size: 0
+[Attributor] Deleted 0 functions after manifest.
+[Attributor] Done with 1 functions, result: unchanged.
+[openmp-opt]Found 0 global thread ID arguments
+[openmp-opt]Conducting Parallel Code Motion
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 BEGIN - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]Checking for Alias 
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+  %.omp.is_last = alloca i32, align 4
+[openmp-opt]Checking for Alias 
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+  %i = alloca i32, align 4
+[openmp-opt]Checking for Alias 
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+  %.omp.stride = alloca i32, align 4
+[openmp-opt]Checking for Alias 
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.stride) #3
+[openmp-opt]Checking for Alias 
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+  %.omp.lb = alloca i32, align 4
+[openmp-opt]Checking for Alias 
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+  %.omp.ub = alloca i32, align 4
+[openmp-opt]Checking for Alias 
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.ub) #3
+[openmp-opt]Checking for Alias 
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+  store i32 9, ptr %.omp.ub, align 4, !tbaa !10
+[openmp-opt]Checking for Alias 
+  %2 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+  %.omp.is_last = alloca i32, align 4
+[openmp-opt]Checking for Alias 
+  %2 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+  %i = alloca i32, align 4
+[openmp-opt]Checking for Alias 
+  %2 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+  %1 = load i32, ptr %0, align 4, !tbaa !10
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.
+Stack dump:
+0.	Program arguments: /home/abhishek/llvm-project/clang_build/bin/opt -debug -enable-new-pm=0 -openmp-opt-cgscc
+1.	Running pass 'CallGraph Pass Manager' on module '<stdin>'.
+ #0 0x000055a7cd9e7baf PrintStackTraceSignalHandler(void*) Signals.cpp:0:0
+ #1 0x000055a7cd9e509c SignalHandler(int) Signals.cpp:0:0
+ #2 0x00007f4a1c0a7980 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x12980)
+ #3 0x000055a7cc6eb134 llvm::AAResults::alias(llvm::MemoryLocation const&, llvm::MemoryLocation const&, llvm::AAQueryInfo&) (/home/abhishek/llvm-project/clang_build/bin/opt+0x21b7134)
+ #4 0x000055a7cc6ecc24 llvm::AAResults::alias(llvm::MemoryLocation const&, llvm::MemoryLocation const&) (/home/abhishek/llvm-project/clang_build/bin/opt+0x21b8c24)
+ #5 0x000055a7cd329e83 bool llvm::function_ref<bool (llvm::Use&, llvm::Function&)>::callback_fn<(anonymous namespace)::OpenMPOpt::parallelCodeMotion()::'lambda'(llvm::Use&, llvm::Function&)>(long, llvm::Use&, llvm::Function&) OpenMPOpt.cpp:0:0
+ #6 0x000055a7cd331fa3 (anonymous namespace)::OMPInformationCache::RuntimeFunctionInfo::foreachUse(llvm::function_ref<bool (llvm::Use&, llvm::Function&)>, llvm::Function*) OpenMPOpt.cpp:0:0
+ #7 0x000055a7cd3323a5 (anonymous namespace)::OpenMPOpt::parallelCodeMotion() OpenMPOpt.cpp:0:0
+ #8 0x000055a7cd364dc8 (anonymous namespace)::OpenMPOpt::run(bool) OpenMPOpt.cpp:0:0
+ #9 0x000055a7cd36858f (anonymous namespace)::OpenMPOptCGSCCLegacyPass::runOnSCC(llvm::CallGraphSCC&) OpenMPOpt.cpp:0:0
+#10 0x000055a7cc7844e7 (anonymous namespace)::CGPassManager::runOnModule(llvm::Module&) CallGraphSCCPass.cpp:0:0
+#11 0x000055a7cd17afd9 llvm::legacy::PassManagerImpl::run(llvm::Module&) (/home/abhishek/llvm-project/clang_build/bin/opt+0x2c46fd9)
+#12 0x000055a7cb091447 main (/home/abhishek/llvm-project/clang_build/bin/opt+0xb5d447)
+#13 0x00007f4a1b182c87 __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21c87)
+#14 0x000055a7cb14325a _start (/home/abhishek/llvm-project/clang_build/bin/opt+0xc0f25a)

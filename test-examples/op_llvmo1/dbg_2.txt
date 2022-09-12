@@ -1,0 +1,438 @@
+Args: /home/abhishek/llvm-project/clang_build/bin/opt -debug -enable-new-pm=0 -openmp-opt-cgscc 
+WARNING: You're attempting to print out a bitcode file.
+This is inadvisable as it may cause display problems. If
+you REALLY want to taste LLVM bitcode first-hand, you
+can force output with the `-f' option.
+
+[openmp-opt]__kmpc_fork_call found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_init_4 found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_fini found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]Run on SCC with 1 functions in a slice with 6 functions
+[Attributor] Identified and initialized 0 abstract attributes.
+
+
+[Attributor] #Iteration: 1, Worklist size: 0
+[Attributor] #Iteration: 1, Worklist+Dependent size: 0
+
+[Attributor] Fixpoint iteration done after: 1/32 iterations
+
+[Attributor] Manifested 0 arguments while 0 were in a valid fixpoint state
+
+[Attributor] Delete/replace at least 0 functions and 0 blocks and 0 instructions and 0 values and 0 uses. To insert 0 unreachables.
+Preserve manifest added 0 blocks
+[Attributor] DeadInsts size: 0
+[Attributor] Deleted 0 functions after manifest.
+[Attributor] Done with 1 functions, result: unchanged.
+[openmp-opt]Found 0 global thread ID arguments
+[openmp-opt]Conducting Parallel Code Motion
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 BEGIN - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]Instructions not for CM : 
+[openmp-opt]Instructions for CM : 
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 END - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]__kmpc_fork_call found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_init_4 found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_fini found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]Run on SCC with 1 functions in a slice with 8 functions
+[Attributor] Identified and initialized 0 abstract attributes.
+
+
+[Attributor] #Iteration: 1, Worklist size: 0
+[Attributor] #Iteration: 1, Worklist+Dependent size: 0
+
+[Attributor] Fixpoint iteration done after: 1/32 iterations
+
+[Attributor] Manifested 0 arguments while 0 were in a valid fixpoint state
+
+[Attributor] Delete/replace at least 0 functions and 0 blocks and 0 instructions and 0 values and 0 uses. To insert 0 unreachables.
+Preserve manifest added 0 blocks
+[Attributor] DeadInsts size: 0
+[Attributor] Check use: .omp_outlined. in   call void (ptr, i32, ptr, ...) @__kmpc_fork_call(ptr @2, i32 0, ptr @.omp_outlined.)
+[Attributor] Call site callback failed for   call void (ptr, i32, ptr, ...) @__kmpc_fork_call(ptr @2, i32 0, ptr @.omp_outlined.)
+[Attributor] Deleted 0 functions after manifest.
+[Attributor] Done with 1 functions, result: unchanged.
+[openmp-opt]Found 0 global thread ID arguments
+[openmp-opt]Conducting Parallel Code Motion
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 BEGIN - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]Instructions not for CM : 
+[openmp-opt]Instructions for CM : 
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 END - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]__kmpc_fork_call found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_init_4 found
+[openmp-opt]-> got 0 uses in 0 different functions.
+[openmp-opt]__kmpc_for_static_fini found
+[openmp-opt]-> got 0 uses in 0 different functions.
+[openmp-opt]Run on SCC with 1 functions in a slice with 3 functions
+[Attributor] Identified and initialized 0 abstract attributes.
+
+
+[Attributor] #Iteration: 1, Worklist size: 0
+[Attributor] #Iteration: 1, Worklist+Dependent size: 0
+
+[Attributor] Fixpoint iteration done after: 1/32 iterations
+
+[Attributor] Manifested 0 arguments while 0 were in a valid fixpoint state
+
+[Attributor] Delete/replace at least 0 functions and 0 blocks and 0 instructions and 0 values and 0 uses. To insert 0 unreachables.
+Preserve manifest added 0 blocks
+[Attributor] DeadInsts size: 0
+[Attributor] Deleted 0 functions after manifest.
+[Attributor] Done with 1 functions, result: unchanged.
+[openmp-opt]Found 0 global thread ID arguments
+[openmp-opt]Conducting Parallel Code Motion
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 BEGIN - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]
+ in selectCMInst closure 
+Calling Function : _Z3foov Called Function : .omp_outlined.
+[openmp-opt]Basic Block Size 11
+[openmp-opt]in BB Loop
+
+entry:
+  %.global_tid..addr = alloca ptr, align 8
+  %.bound_tid..addr = alloca ptr, align 8
+  %.omp.iv = alloca i32, align 4
+  %tmp = alloca i32, align 4
+  %.omp.lb = alloca i32, align 4
+  %.omp.ub = alloca i32, align 4
+  %.omp.stride = alloca i32, align 4
+  %.omp.is_last = alloca i32, align 4
+  %i = alloca i32, align 4
+  store ptr %.global_tid., ptr %.global_tid..addr, align 8, !tbaa !6
+  store ptr %.bound_tid., ptr %.bound_tid..addr, align 8, !tbaa !6
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.iv) #3
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.lb) #3
+  store i32 0, ptr %.omp.lb, align 4, !tbaa !10
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.ub) #3
+  store i32 9, ptr %.omp.ub, align 4, !tbaa !10
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.stride) #3
+  store i32 1, ptr %.omp.stride, align 4, !tbaa !10
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.is_last) #3
+  store i32 0, ptr %.omp.is_last, align 4, !tbaa !10
+  call void @llvm.lifetime.start.p0(i64 4, ptr %i) #3
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+  %1 = load i32, ptr %0, align 4, !tbaa !10
+  call void @__kmpc_for_static_init_4(ptr @1, i32 %1, i32 34, ptr %.omp.is_last, ptr %.omp.lb, ptr %.omp.ub, ptr %.omp.stride, i32 1, i32 1)
+  %2 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+  %cmp = icmp sgt i32 %2, 9
+  br i1 %cmp, label %cond.true, label %cond.false
+
+[openmp-opt]in BB->I Loop
+  %.global_tid..addr = alloca ptr, align 8
+[openmp-opt]in BB->I Loop
+  %.bound_tid..addr = alloca ptr, align 8
+[openmp-opt]in BB->I Loop
+  %.omp.iv = alloca i32, align 4
+[openmp-opt]in BB->I Loop
+  %tmp = alloca i32, align 4
+[openmp-opt]in BB->I Loop
+  %.omp.lb = alloca i32, align 4
+[openmp-opt]in BB->I Loop
+  %.omp.ub = alloca i32, align 4
+[openmp-opt]in BB->I Loop
+  %.omp.stride = alloca i32, align 4
+[openmp-opt]in BB->I Loop
+  %.omp.is_last = alloca i32, align 4
+[openmp-opt]in BB->I Loop
+  %i = alloca i32, align 4
+[openmp-opt]in BB->I Loop
+  store ptr %.global_tid., ptr %.global_tid..addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  store ptr %.bound_tid., ptr %.bound_tid..addr, align 8, !tbaa !6
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.iv) #3
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.lb) #3
+[openmp-opt]in BB->I Loop
+  store i32 0, ptr %.omp.lb, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.ub) #3
+[openmp-opt]in BB->I Loop
+  store i32 9, ptr %.omp.ub, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.stride) #3
+[openmp-opt]in BB->I Loop
+  store i32 1, ptr %.omp.stride, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.is_last) #3
+[openmp-opt]in BB->I Loop
+  store i32 0, ptr %.omp.is_last, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.start.p0(i64 4, ptr %i) #3
+[openmp-opt]in BB->I Loop
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+[openmp-opt]in BB->I Loop
+  %1 = load i32, ptr %0, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  call void @__kmpc_for_static_init_4(ptr @1, i32 %1, i32 34, ptr %.omp.is_last, ptr %.omp.lb, ptr %.omp.ub, ptr %.omp.stride, i32 1, i32 1)
+[openmp-opt]in BB->I Loop
+  %2 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  %cmp = icmp sgt i32 %2, 9
+[openmp-opt]in BB->I Loop
+  br i1 %cmp, label %cond.true, label %cond.false
+[openmp-opt]in BB Loop
+
+cond.true:                                        ; preds = %entry
+  br label %cond.end
+
+[openmp-opt]in BB->I Loop
+  br label %cond.end
+[openmp-opt]in BB Loop
+
+cond.false:                                       ; preds = %entry
+  %3 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+  br label %cond.end
+
+[openmp-opt]in BB->I Loop
+  %3 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  br label %cond.end
+[openmp-opt]in BB Loop
+
+cond.end:                                         ; preds = %cond.false, %cond.true
+  %cond = phi i32 [ 9, %cond.true ], [ %3, %cond.false ]
+  store i32 %cond, ptr %.omp.ub, align 4, !tbaa !10
+  %4 = load i32, ptr %.omp.lb, align 4, !tbaa !10
+  store i32 %4, ptr %.omp.iv, align 4, !tbaa !10
+  br label %omp.inner.for.cond
+
+[openmp-opt]in BB->I Loop
+  %cond = phi i32 [ 9, %cond.true ], [ %3, %cond.false ]
+[openmp-opt]in BB->I Loop
+  store i32 %cond, ptr %.omp.ub, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  %4 = load i32, ptr %.omp.lb, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  store i32 %4, ptr %.omp.iv, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  br label %omp.inner.for.cond
+[openmp-opt]in BB Loop
+
+omp.inner.for.cond:                               ; preds = %omp.inner.for.inc, %cond.end
+  %5 = load i32, ptr %.omp.iv, align 4, !tbaa !10
+  %6 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+  %cmp1 = icmp sle i32 %5, %6
+  br i1 %cmp1, label %omp.inner.for.body, label %omp.inner.for.cond.cleanup
+
+[openmp-opt]in BB->I Loop
+  %5 = load i32, ptr %.omp.iv, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  %6 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  %cmp1 = icmp sle i32 %5, %6
+[openmp-opt]in BB->I Loop
+  br i1 %cmp1, label %omp.inner.for.body, label %omp.inner.for.cond.cleanup
+[openmp-opt]in BB Loop
+
+omp.inner.for.cond.cleanup:                       ; preds = %omp.inner.for.cond
+  br label %omp.inner.for.end
+
+[openmp-opt]in BB->I Loop
+  br label %omp.inner.for.end
+[openmp-opt]in BB Loop
+
+omp.inner.for.body:                               ; preds = %omp.inner.for.cond
+  %7 = load i32, ptr %.omp.iv, align 4, !tbaa !10
+  %mul = mul nsw i32 %7, 1
+  %add = add nsw i32 0, %mul
+  store i32 %add, ptr %i, align 4, !tbaa !10
+  call void @_Z3barv()
+  br label %omp.body.continue
+
+[openmp-opt]in BB->I Loop
+  %7 = load i32, ptr %.omp.iv, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  %mul = mul nsw i32 %7, 1
+[openmp-opt]in BB->I Loop
+  %add = add nsw i32 0, %mul
+[openmp-opt]in BB->I Loop
+  store i32 %add, ptr %i, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  call void @_Z3barv()
+[openmp-opt]in BB->I Loop
+  br label %omp.body.continue
+[openmp-opt]in BB Loop
+
+omp.body.continue:                                ; preds = %omp.inner.for.body
+  br label %omp.inner.for.inc
+
+[openmp-opt]in BB->I Loop
+  br label %omp.inner.for.inc
+[openmp-opt]in BB Loop
+
+omp.inner.for.inc:                                ; preds = %omp.body.continue
+  %8 = load i32, ptr %.omp.iv, align 4, !tbaa !10
+  %add2 = add nsw i32 %8, 1
+  store i32 %add2, ptr %.omp.iv, align 4, !tbaa !10
+  br label %omp.inner.for.cond
+
+[openmp-opt]in BB->I Loop
+  %8 = load i32, ptr %.omp.iv, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  %add2 = add nsw i32 %8, 1
+[openmp-opt]in BB->I Loop
+  store i32 %add2, ptr %.omp.iv, align 4, !tbaa !10
+[openmp-opt]in BB->I Loop
+  br label %omp.inner.for.cond
+[openmp-opt]in BB Loop
+
+omp.inner.for.end:                                ; preds = %omp.inner.for.cond.cleanup
+  br label %omp.loop.exit
+
+[openmp-opt]in BB->I Loop
+  br label %omp.loop.exit
+[openmp-opt]in BB Loop
+
+omp.loop.exit:                                    ; preds = %omp.inner.for.end
+  call void @__kmpc_for_static_fini(ptr @1, i32 %1)
+  call void @llvm.lifetime.end.p0(i64 4, ptr %i) #3
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.is_last) #3
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.stride) #3
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.ub) #3
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.lb) #3
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.iv) #3
+  ret void
+
+[openmp-opt]in BB->I Loop
+  call void @__kmpc_for_static_fini(ptr @1, i32 %1)
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.end.p0(i64 4, ptr %i) #3
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.is_last) #3
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.stride) #3
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.ub) #3
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.lb) #3
+[openmp-opt]in BB->I Loop
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.iv) #3
+[openmp-opt]in BB->I Loop
+  ret void
+[openmp-opt]Instructions not for CM : 
+  %.omp.iv = alloca i32, align 4
+  store i32 1, ptr %.omp.stride, align 4, !tbaa !10
+  call void @llvm.lifetime.end.p0(i64 4, ptr %i) #3
+  %tmp = alloca i32, align 4
+  %.omp.lb = alloca i32, align 4
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.is_last) #3
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.stride) #3
+  br label %omp.body.continue
+  store i32 0, ptr %.omp.lb, align 4, !tbaa !10
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.lb) #3
+  br i1 %cmp, label %cond.true, label %cond.false
+  br i1 %cmp1, label %omp.inner.for.body, label %omp.inner.for.cond.cleanup
+  %.omp.ub = alloca i32, align 4
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.ub) #3
+  ret void
+  store i32 0, ptr %.omp.is_last, align 4, !tbaa !10
+  %.omp.stride = alloca i32, align 4
+  br label %omp.loop.exit
+  %.omp.is_last = alloca i32, align 4
+  %i = alloca i32, align 4
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.is_last) #3
+  call void @__kmpc_for_static_fini(ptr @1, i32 %1)
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.iv) #3
+  store ptr %.global_tid., ptr %.global_tid..addr, align 8, !tbaa !6
+  store i32 %add, ptr %i, align 4, !tbaa !10
+  %1 = load i32, ptr %0, align 4, !tbaa !10
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.ub) #3
+  store i32 %4, ptr %.omp.iv, align 4, !tbaa !10
+  call void @_Z3barv()
+  br label %omp.inner.for.cond
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.lb) #3
+  store i32 %add2, ptr %.omp.iv, align 4, !tbaa !10
+  call void @llvm.lifetime.start.p0(i64 4, ptr %i) #3
+  br label %omp.inner.for.cond
+  store i32 9, ptr %.omp.ub, align 4, !tbaa !10
+  br label %omp.inner.for.inc
+  br label %cond.end
+  store ptr %.bound_tid., ptr %.bound_tid..addr, align 8, !tbaa !6
+  br label %omp.inner.for.end
+  %.global_tid..addr = alloca ptr, align 8
+  br label %cond.end
+  call void @__kmpc_for_static_init_4(ptr @1, i32 %1, i32 34, ptr %.omp.is_last, ptr %.omp.lb, ptr %.omp.ub, ptr %.omp.stride, i32 1, i32 1)
+  store i32 %cond, ptr %.omp.ub, align 4, !tbaa !10
+  call void @llvm.lifetime.start.p0(i64 4, ptr %.omp.iv) #3
+  %cond = phi i32 [ 9, %cond.true ], [ %3, %cond.false ]
+  %.bound_tid..addr = alloca ptr, align 8
+  call void @llvm.lifetime.end.p0(i64 4, ptr %.omp.stride) #3
+[openmp-opt]Instructions for CM : 
+  %5 = load i32, ptr %.omp.iv, align 4, !tbaa !10
+  %6 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+  %cmp1 = icmp sle i32 %5, %6
+  %add = add nsw i32 0, %mul
+  %add2 = add nsw i32 %8, 1
+  %0 = load ptr, ptr %.global_tid..addr, align 8
+  %2 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+  %cmp = icmp sgt i32 %2, 9
+  %3 = load i32, ptr %.omp.ub, align 4, !tbaa !10
+  %7 = load i32, ptr %.omp.iv, align 4, !tbaa !10
+  %4 = load i32, ptr %.omp.lb, align 4, !tbaa !10
+  %mul = mul nsw i32 %7, 1
+  %8 = load i32, ptr %.omp.iv, align 4, !tbaa !10
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 END - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+CGSCCPASSMGR: Refreshing SCC with 1 nodes:
+Call graph node for function: '_Z3foov'<<0x55bda4de67c0>>  #uses=2
+  CS<0x55bda4dfa6b0> calls function '__kmpc_fork_call'
+  CS<None> calls function '.omp_outlined.'
+
+CGSCCPASSMGR: SCC Refresh didn't change call graph.
+[openmp-opt]__kmpc_fork_call found
+[openmp-opt]-> got 1 uses in 1 different functions.
+[openmp-opt]__kmpc_for_static_init_4 found
+[openmp-opt]-> got 0 uses in 0 different functions.
+[openmp-opt]__kmpc_for_static_fini found
+[openmp-opt]-> got 0 uses in 0 different functions.
+[openmp-opt]Run on SCC with 1 functions in a slice with 4 functions
+[Attributor] Identified and initialized 0 abstract attributes.
+
+
+[Attributor] #Iteration: 1, Worklist size: 0
+[Attributor] #Iteration: 1, Worklist+Dependent size: 0
+
+[Attributor] Fixpoint iteration done after: 1/32 iterations
+
+[Attributor] Manifested 0 arguments while 0 were in a valid fixpoint state
+
+[Attributor] Delete/replace at least 0 functions and 0 blocks and 0 instructions and 0 values and 0 uses. To insert 0 unreachables.
+Preserve manifest added 0 blocks
+[Attributor] DeadInsts size: 0
+[Attributor] Deleted 0 functions after manifest.
+[Attributor] Done with 1 functions, result: unchanged.
+[openmp-opt]Found 0 global thread ID arguments
+[openmp-opt]Conducting Parallel Code Motion
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 BEGIN - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+
+[openmp-opt]Instructions not for CM : 
+[openmp-opt]Instructions for CM : 
+[openmp-opt]-------------------------------------------------------------------
+[openmp-opt]                 END - ParallelCodeMotion                        
+[openmp-opt]-------------------------------------------------------------------
+

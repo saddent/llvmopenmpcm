@@ -8,18 +8,16 @@ void bar() {
     a++;
 }
 
-int foo() {
-    #pragma omp parallel for
+void foo() {
+    #pragma omp parallel for default(shared)
     {
        for(int i = 0; i <  10; i++) {
              bar();
        }
     }
-    return 0;
 }
 
 int main(){
-    printf("OpenMP : Example 1 \n");
     foo();
     return 0;
 }

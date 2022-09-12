@@ -3,7 +3,7 @@
 
 int a, b, c, d;
 
-int foo() {
+void foo() {
     int e, f, i;
     i = 0;
     a = 1;
@@ -12,8 +12,7 @@ int foo() {
     d = 4;
     e = 5;
     f = 6;
-    #pragma omp parallel
-    {
+    #pragma omp parallel default(shared)
         if(i == 0) {
             int x = a + b;
             int v = e + f;
@@ -21,8 +20,6 @@ int foo() {
             int y = a + b;
             int z = e + f;
         }
-    }
-    return 0;
 }
 
 int main(){
